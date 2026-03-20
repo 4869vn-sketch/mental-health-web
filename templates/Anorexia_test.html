@@ -1,0 +1,231 @@
+<head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+       width: 60%;
+       background: #74b736;
+       padding: 20px;
+       border-radius: 10px;
+    }
+
+    h1 {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px gray;
+    }
+
+    .options {
+        background-color: #e8f0fe;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<div class="container">
+<h1>Mental Health Quick Test</h1>
+
+<h2>TEST Anorexia Nervosa</h2>
+
+<form method="POST" action="{{ url_for('anorexia_nervosa_test') }}">
+
+Over the pass 2 weeks (or generally, if long-term), how often do the following apply to you?<br>
+0 = Rarely<br>
+1 = Sometimes<br>
+2 = Often<br>
+3 = Always<br><br>
+1. PHYSICAL SYMPTOMS<br>
+<p>1. I have experienced noticeable weight loss or difficulty maintaining a healthy weight?</p>
+<input type="radio" name="q1" value="0"required>Rarely
+<input type="radio" name="q1" value="1">Sometimes
+<input type="radio" name="q1" value="2">Often
+<input type="radio" name="q1" value="3">Always
+
+<p>2. I often feel physically weak, tired, or low in energy?</p>
+<input type="radio" name="q2" value="0"required>Rarely
+<input type="radio" name="q2" value="1">Sometimes
+<input type="radio" name="q2" value="2">Often
+<input type="radio" name="q2" value="3">Always
+
+<p>3. I feel cold more easily than others?</p>
+<input type="radio" name="q3" value="0"required>Rarely
+<input type="radio" name="q3" value="1">Sometimes
+<input type="radio" name="q3" value="2">Often
+<input type="radio" name="q3" value="3">Always
+
+<p>4. I experience dizziness or lightheadedness?</p>
+<input type="radio" name="q4" value="0"required>Rarely
+<input type="radio" name="q4" value="1">Sometimes
+<input type="radio" name="q4" value="2">Often
+<input type="radio" name="q4" value="3">Always
+
+<p>5. I notice changes in my body such as hair thinning or dry skin?</p>
+<input type="radio" name="q5" value="0"required>Rarely
+<input type="radio" name="q5" value="1">Sometimes
+<input type="radio" name="q5" value="2">Often
+<input type="radio" name="q5" value="3">Always
+
+<p>6. I have irregular or missed menstrual cycles (with woman)?</p>
+<input type="radio" name="q6" value="0"required>Rarely
+<input type="radio" name="q6" value="1">Sometimes
+<input type="radio" name="q6" value="2">Often
+<input type="radio" name="q6" value="3">Always<br><br>
+
+2. BEHAVIORAL SYMPTOMS<br>
+<p>7. I restrict my food intake intentionally?</p>
+<input type="radio" name="q7" value="0"required>Rarely
+<input type="radio" name="q7" value="1">Sometimes
+<input type="radio" name="q7" value="2">Often
+<input type="radio" name="q7" value="3">Always
+
+<p>8. I skip meals even when I am hungry?</p>
+<input type="radio" name="q8" value="0"required>Rarely
+<input type="radio" name="q8" value="1">Sometimes
+<input type="radio" name="q8" value="2">Often
+<input type="radio" name="q8" value="3">Always
+
+<p>9. I count calories or strictly control what I eat?</p>
+<input type="radio" name="q9" value="0"required>Rarely
+<input type="radio" name="q9" value="1">Sometimes
+<input type="radio" name="q9" value="2">Often
+<input type="radio" name="q9" value="3">Always
+
+<p>10. I avoid certain foods because of fear of gaining weight?</p>
+<input type="radio" name="q10" value="0"required>Rarely
+<input type="radio" name="q10" value="1">Sometimes
+<input type="radio" name="q10" value="2">Often
+<input type="radio" name="q10" value="3">Always
+
+<p>11. I exercise excessively to burn calories?</p>
+<input type="radio" name="q11" value="0"required>Rarely
+<input type="radio" name="q11" value="1">Sometimes
+<input type="radio" name="q11" value="2">Often
+<input type="radio" name="q11" value="3">Always
+
+<p>12. I feel guilty after eating?</p>
+<input type="radio" name="q12" value="0"required>Rarely
+<input type="radio" name="q12" value="1">Sometimes
+<input type="radio" name="q12" value="2">Often
+<input type="radio" name="q12" value="3">Always
+
+<p>13. I hide my eating habits from others?</p>
+<input type="radio" name="q13" value="0"required>Rarely
+<input type="radio" name="q13" value="1">Sometimes
+<input type="radio" name="q13" value="2">Often
+<input type="radio" name="q13" value="3">Always
+
+<p>14. I develop strict eating routines or rituals?</p>
+<input type="radio" name="q14" value="0"required>Rarely
+<input type="radio" name="q14" value="1">Sometimes
+<input type="radio" name="q14" value="2">Often
+<input type="radio" name="q14" value="3">Always
+
+<p>15. I weigh myself frequently or check my body often?</p>
+<input type="radio" name="q15" value="0"required>Rarely
+<input type="radio" name="q15" value="1">Sometimes
+<input type="radio" name="q15" value="2">Often
+<input type="radio" name="q15" value="3">Always
+
+<p>16. I avoid eating in front of others?</p>
+<input type="radio" name="q16" value="0"required>Rarely
+<input type="radio" name="q16" value="1">Sometimes
+<input type="radio" name="q16" value="2">Often
+<input type="radio" name="q16" value="3">Always<br><br>
+
+3. PSYCHOLOGICAL & COGNITIVE SYMPTOMS<br>
+<p>17. I have an intense fear of gaining weight?</p>
+<input type="radio" name="q17" value="0"required>Rarely
+<input type="radio" name="q17" value="1">Sometimes
+<input type="radio" name="q17" value="2">Often
+<input type="radio" name="q17" value="3">Always
+
+<p>18. I feel that my body is “too big” even when others say I am thin?</p>
+<input type="radio" name="q18" value="0"required>Rarely
+<input type="radio" name="q18" value="1">Sometimes
+<input type="radio" name="q18" value="2">Often
+<input type="radio" name="q18" value="3">Always
+
+<p>19. My self-worth is strongly influenced by my weight or body shape?</p>
+<input type="radio" name="q19" value="0"required>Rarely
+<input type="radio" name="q19" value="1">Sometimes
+<input type="radio" name="q19" value="2">Often
+<input type="radio" name="q19" value="3">Always
+
+<p>20. I feel anxious or distressed about eating or food?</p>
+<input type="radio" name="q20" value="0"required>Rarely
+<input type="radio" name="q20" value="1">Sometimes
+<input type="radio" name="q20" value="2">Often
+<input type="radio" name="q20" value="3">Always
+
+<p>21. I constantly think about food, calories, or body image?</p>
+<input type="radio" name="q21" value="0"required>Rarely
+<input type="radio" name="q21" value="1">Sometimes
+<input type="radio" name="q21" value="2">Often
+<input type="radio" name="q21" value="3">Always
+
+<p>22. I feel a need to be in control of my body or eating?</p>
+<input type="radio" name="q22" value="0"required>Rarely
+<input type="radio" name="q22" value="1">Sometimes
+<input type="radio" name="q22" value="2">Often
+<input type="radio" name="q22" value="3">Always
+
+<p>23. I compare my body to others frequently?</p>
+<input type="radio" name="q23" value="0"required>Rarely
+<input type="radio" name="q23" value="1">Sometimes
+<input type="radio" name="q23" value="2">Often
+<input type="radio" name="q23" value="3">Always
+
+<p>24. I feel dissatisfied with my body most of the time?</p>
+<input type="radio" name="q24" value="0"required>Rarely
+<input type="radio" name="q24" value="1">Sometimes
+<input type="radio" name="q24" value="2">Often
+<input type="radio" name="q24" value="3">Always
+
+<p>25. I deny or downplay the seriousness of my low weight or eating habits?</p>
+<input type="radio" name="q25" value="0"required>Rarely
+<input type="radio" name="q25" value="1">Sometimes
+<input type="radio" name="q25" value="2">Often
+<input type="radio" name="q25" value="3">Always
+
+<p>26. I feel distressed when I cannot control my eating or weight?</p>
+<input type="radio" name="q26" value="0"required>Rarely
+<input type="radio" name="q26" value="1">Sometimes
+<input type="radio" name="q26" value="2">Often
+<input type="radio" name="q26" value="3">Always
+
+<br><br>
+<button type="submit">Submit</button>
+
+</form>
+</div>

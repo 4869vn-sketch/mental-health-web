@@ -1,0 +1,108 @@
+<head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        width: 60%;
+        background: #74b736;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px gray;
+    }
+    .options {
+        background-color: #e8f0fe;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<div class="container">
+<h1>Mental Health Quick Test</h1>
+<h2>TEST BPD</h2>
+
+<form method="POST" action="{{ url_for('BPD_test') }}">
+
+Answer YES or NO to each question based on how you have generally felt or behaved (not just temporarily).<br>
+Yes = 1<br>
+No = 0<br>
+<p>1.Do you often experience intense and unstable relationships (e.g., quickly shifting from closeness to conflict)?</p>
+<input type="radio" name="q1" value="1" required>Yes
+<input type="radio" name="q1" value="0">No
+
+<p>2.Do you have a strong fear of being abandoned or rejected, even when it may not be realistic?</p>
+<input type="radio" name="q2" value="1" required>Yes
+<input type="radio" name="q2" value="0">No
+
+<p>3.Do you feel unsure about who you are or struggle with your identity?</p>
+<input type="radio" name="q3" value="1" required>Yes
+<input type="radio" name="q3" value="0">No
+
+<p>4.Do your moods change rapidly (e.g., from happy to sad or angry within hours)?</p>
+<input type="radio" name="q4" value="1" required>Yes
+<input type="radio" name="q4" value="0">No
+
+<p>5.Do you often feel empty inside?</p>
+<input type="radio" name="q5" value="1" required>Yes
+<input type="radio" name="q5" value="0">No
+
+<p>6.Do you have difficulty controlling anger or experience intense anger outbursts?</p>
+<input type="radio" name="q6" value="1" required>Yes
+<input type="radio" name="q6" value="0">No
+
+<p>7.Do you act impulsively in ways that could be harmful (e.g., spending, risky behavior)?</p>
+<input type="radio" name="q7" value="1" required>Yes
+<input type="radio" name="q7" value="0">No
+
+<p>8.Do you sometimes feel disconnected from reality, yourself, or your surroundings (e.g., dissociation)?</p>
+<input type="radio" name="q8" value="1" required>Yes
+<input type="radio" name="q8" value="0">No
+
+<p>9.Have you had repeated thoughts about self-harm or suicide, or engaged in self-harming behaviors?</p>
+<input type="radio" name="q9" value="1" required>Yes
+<input type="radio" name="q9" value="0">No
+
+<p>10.Do small events or conflicts trigger very strong emotional reactions in you?</p>
+<input type="radio" name="q10" value="1" required>Yes
+<input type="radio" name="q10" value="0">No
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>

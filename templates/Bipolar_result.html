@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bipolar Disorder Test Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            margin: 100px auto;
+            padding: 30px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .result-wrapper{
+            margin-bottom: 25px;  
+            width: 300px;     
+        }
+        .category{
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .label-row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-family: 'Courier New', 'monospace';
+            font-weight: bold;
+            color: #ec0f0f;
+        }
+        .bar-bg{
+            width: 100%;
+            background-color: #eee;
+            margin-bottom: 15px;
+            height: 15px;
+            border-radius: 20px;
+            border: 1px solid #000000;
+            overflow: hidden;
+        }
+        .bar-fill{
+            height: 15px;
+            line-height: 25px;
+            border-radius: 20px;
+            transition: width 0.8s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Your Result</h1>
+    <h2 style="color: #ec0f0f;">({{score}}/95)</h2>
+
+    <div class="result-wrapper">
+    <h2 style="text-align: center;">Detailed results</h2>
+    <!--Thanh Manic / Hypomanic Symptoms-->
+    <div class="category">
+        <div class="label-row">
+            <span class="pct">{{ manic_pct }}%</span>
+            <span class="name">Manic / Hypomanic Symptoms</span>
+        </div>
+        <div class="bar-bg">
+            <div class="bar-fill"style="width: {{ manic_pct }}%; background-color: blue; float: right;"></div>
+        </div>
+    </div>
+    <!--Thanh Depressive Symptoms-->
+    <div class="category">
+        <div class="label-row">
+            <span class="pct">{{ depressive_pct }}%</span>
+            <span class="name">Depressive Symptoms</span>
+        </div>
+        <div class="bar-bg">
+            <div class="bar-fill"style="width: {{ depressive_pct }}%; background-color: red; float: right;"></div>
+        </div>
+    </div>
+    <!--Thanh Mixed Symptoms-->
+    <div class="category">
+        <div class="label-row">
+            <span class="pct">{{ mixed_pct }}%</span>
+            <span class="name">Mixed Symptoms</span>
+        </div>
+        <div class="bar-bg">
+            <div class="bar-fill"style="width: {{ mixed_pct }}%; background-color: #39c27d; float: right;"></div>
+        </div>
+    </div>
+
+    <br>
+    <a href="/test/Bipolar Disorder">Do test again</a>
+
+</div>
+
+</body>
+</html>

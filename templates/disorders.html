@@ -1,0 +1,9 @@
+<h1>Mental Disorders</h1>
+
+<ul>
+{% for d in disorders %}
+<li>
+<a href="/disorder/{{d.id}}">{{d.name}}</a>
+</li>
+{% endfor %}
+</ul>

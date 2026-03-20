@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCD Test Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            margin: 100px auto;
+            padding: 30px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .result-wrapper{
+            margin-bottom: 25px;  
+            width: 300px;     
+        }
+        .category{
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .label-row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-family: 'Courier New', 'monospace';
+            font-weight: bold;
+            color: #ec0f0f;
+        }
+        .bar-bg{
+            width: 100%;
+            background-color: #eee;
+            margin-bottom: 15px;
+            height: 15px;
+            border-radius: 20px;
+            border: 1px solid #000000;
+            overflow: hidden;
+        }
+        .bar-fill{
+            height: 15px;
+            line-height: 25px;
+            border-radius: 20px;
+            transition: width 0.8s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Your Result</h1>
+    <h2 style="color: #ec0f0f;">({{score}}/72)</h2>
+
+    <div class="result-wrapper">
+        <h2 style="text-align: center;">Detailed results</h2>
+
+        <!--Thanh Washing-->
+        <div class="category">
+            <div class="label-row">
+                <span class="pct">{{ washing_pct }}%</span>
+                <span class="name">Washing</span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"style="width: {{ washing_pct }}%; background-color: blue; float: right;"></div>
+            </div>
+        </div>
+        <!--Thanh Checking-->
+        <div class="category">
+            <div class="label-row">
+                <span class="pct">{{ checking_pct }}%</span>
+                <span class="name">Checking</span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"style="width: {{ checking_pct }}%; background-color: red; float: right;"></div>
+            </div>
+        </div>
+        <!--Thanh Ordering/ Symmetry-->
+        <div class="category">
+            <div class="label-row">
+                <span class="pct">{{ ordering_pct }}%</span>
+                <span class="name">Ordering / Symmetry</span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"style="width: {{ ordering_pct }}%; background-color: #39c27d; float: right;"></div>
+            </div>
+        </div>
+        <!--Thanh Obsessing-->
+        <div class="category">
+            <div class="label-row">
+                <span class="pct">{{ obsessing_pct }}%</span>
+                <span class="name">Obsessing</span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"style="width: {{ Obsessing_pct }}%; background-color: rgb(165, 192, 30); float: right;"></div>
+            </div>
+        </div>
+        <!--Thanh Hoarding-->
+        <div class="category">
+            <div class="label-row">
+                <span class="pct">{{ hoarding_pct }}%</span>
+                <span class="name">Hoarding</span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"style="width: {{ hoarding_pct }}%; background-color: rgb(178, 44, 188); float: right;"></div>
+            </div>
+        </div>
+        <!--Thanh Neutralizing-->
+        <div class="category">
+            <div class="label-row">
+                <span class="pct">{{ neutralizing_pct }}%</span>
+                <span class="name">Neutralizing</span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"style="width: {{ neutralizing_pct }}%; background-color: #16d1b5; float: right;"></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <br>
+    <a href="/test/OCD">Do test again</a>
+
+</div>
+
+</body>
+</html>
+

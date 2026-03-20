@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mental Health Website</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>Mental Health Information</h1>
+
+<p>This website provides educational information about mental disorders.</p>
+
+<a href="/disorders">Mental Disorders</a>
+<a href="/contact">Contact / Ask Question</a>
+<a href="/chatbot">AI Mental Health Chatbot</a><br>
+
+<h2>Tests</h2>
+
+<a href="/test/Anxiety Disorder">Anxiety Disorder Test</a>
+<a href="/test/Bipolar Disorder">Bipolar Disorder Test</a>
+<a href="/test/AvPD">AvPD Test</a>
+<a href="/test/BPD">BPD Test</a>
+<a href="/test/OCD">OCD Test</a>
+<a href="/test/Schizophrenia">Schizophrenia Test</a>
+<a href="/test/Anorexia Nervosa">Anorexia Nervosa Test</a>
+
+<h3>Reference</h3>
+
+<p>
+Diagnostic criteria referenced from the DSM-5. Reference book link:
+<a href="{{ url_for('static', filename = 'DSM-5.pdf') }}"target="_blank_" style="color: #4da6ff; font-weight: bold;">DSM-5 PDF</a>
+</p>
+
+</body>
+</html>

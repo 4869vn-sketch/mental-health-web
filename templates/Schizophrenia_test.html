@@ -1,0 +1,174 @@
+<head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+       width: 60%;
+       background: #74b736;
+       padding: 20px;
+       border-radius: 10px;
+    }
+
+    h1 {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px gray;
+    }
+
+    .options {
+        background-color: #e8f0fe;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<div class="container">
+<h1>Mental Health Quick Test</h1>
+
+<h2>TEST Schizophrenia</h2>
+
+<form method="POST" action="{{ url_for('schizophrenia_test') }}">
+
+Over the past 2 weeks, how often have you experienced the following?<br>
+0 = Not at all<br>
+1 = A few days<br>
+2 = Many days<br>
+3 = Always<br><br>
+1. HALLUCINATIONS<br>
+<p>1. I hear voices or sounds that others do not hear?</p>
+<input type="radio" name="q1" value="0"required>Not at all
+<input type="radio" name="q1" value="1">A few days
+<input type="radio" name="q1" value="2">Many days
+<input type="radio" name="q1" value="3">Always
+
+<p>2. I see things that others do not see?</p>
+<input type="radio" name="q2" value="0"required>Not at all
+<input type="radio" name="q2" value="1">A few days
+<input type="radio" name="q2" value="2">Many days
+<input type="radio" name="q2" value="3">Always
+
+<p>3. I feel touched or sensations on my body without a clear cause?</p>
+<input type="radio" name="q3" value="0"required>Not at all
+<input type="radio" name="q3" value="1">A few days
+<input type="radio" name="q3" value="2">Many days
+<input type="radio" name="q3" value="3">Always
+
+<p>4. I perceive smells or tastes that others do not notice?</p>
+<input type="radio" name="q4" value="0"required>Not at all
+<input type="radio" name="q4" value="1">A few days
+<input type="radio" name="q4" value="2">Many days
+<input type="radio" name="q4" value="3">Always<br><br>
+
+2. DELUSIONS/ FALSE BELIEFS<br>
+<p>5. I believe others are watching, following, or spying on me?</p>
+<input type="radio" name="q5" value="0"required>Not at all
+<input type="radio" name="q5" value="1">A few days
+<input type="radio" name="q5" value="2">Many days
+<input type="radio" name="q5" value="3">Always
+
+<p>6. I feel that people are trying to harm or control me?</p>
+<input type="radio" name="q6" value="0"required>Not at all
+<input type="radio" name="q6" value="1">A few days
+<input type="radio" name="q6" value="2">Many days
+<input type="radio" name="q6" value="3">Always
+
+<p>7. I believe I have special powers or abilities that others do not recognize?</p>
+<input type="radio" name="q7" value="0"required>Not at all
+<input type="radio" name="q7" value="1">A few days
+<input type="radio" name="q7" value="2">Many days
+<input type="radio" name="q7" value="3">Always
+
+<p>8. I think ordinary events or messages have special meaning directed at me?</p>
+<input type="radio" name="q8" value="0"required>Not at all
+<input type="radio" name="q8" value="1">A few days
+<input type="radio" name="q8" value="2">Many days
+<input type="radio" name="q8" value="3">Always<br><br>
+
+3. DISORGANIZED THIKING/ BEHAVIOR<br>
+<p>9. I find it difficult to organize my thoughts clearly?</p>
+<input type="radio" name="q9" value="0"required>Not at all
+<input type="radio" name="q9" value="1">A few days
+<input type="radio" name="q9" value="2">Many days
+<input type="radio" name="q9" value="3">Always
+
+<p>10. I notice my speech becoming confusing or hard for others to understand?</p>
+<input type="radio" name="q10" value="0"required>Not at all
+<input type="radio" name="q10" value="1">A few days
+<input type="radio" name="q10" value="2">Many days
+<input type="radio" name="q10" value="3">Always
+
+<p>11. I have trouble staying focused on a topic or conversation?</p>
+<input type="radio" name="q11" value="0"required>Not at all
+<input type="radio" name="q11" value="1">A few days
+<input type="radio" name="q11" value="2">Many days
+<input type="radio" name="q11" value="3">Always
+
+<p>12. My behavior sometimes seems unusual or inappropriate to others?</p>
+<input type="radio" name="q12" value="0"required>Not at all
+<input type="radio" name="q12" value="1">A few days
+<input type="radio" name="q12" value="2">Many days
+<input type="radio" name="q12" value="3">Always<br><br>
+
+4. ABNORMAL PERCEPTIONS/ EXPERIENCES<br>
+<p>13. I feel disconnected from reality or unsure what is real?</p>
+<input type="radio" name="q13" value="0"required>Not at all
+<input type="radio" name="q13" value="1">A few days
+<input type="radio" name="q13" value="2">Many days
+<input type="radio" name="q13" value="3">Always
+
+<p>14. I feel detached from myself or my surroundings?</p>
+<input type="radio" name="q14" value="0"required>Not at all
+<input type="radio" name="q14" value="1">A few days
+<input type="radio" name="q14" value="2">Many days
+<input type="radio" name="q14" value="3">Always
+
+<p>15. I experience unusual sensations or perceptions that are hard to explain?</p>
+<input type="radio" name="q15" value="0"required>Not at all
+<input type="radio" name="q15" value="1">A few days
+<input type="radio" name="q15" value="2">Many days
+<input type="radio" name="q15" value="3">Always
+
+<p>16. I feel that my thoughts are being interfered with or not fully my own?</p>
+<input type="radio" name="q16" value="0"required>Not at all
+<input type="radio" name="q16" value="1">A few days
+<input type="radio" name="q16" value="2">Many days
+<input type="radio" name="q16" value="3">Always
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>

@@ -1,0 +1,231 @@
+<head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+       width: 60%;
+       background: #74b736;
+       padding: 20px;
+       border-radius: 10px;
+    }
+
+    h1 {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px gray;
+    }
+
+    .options {
+        background-color: #e8f0fe;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<div class="container">
+<h1>Mental Health Quick Test</h1>
+
+<h2>TEST Bipolar</h2>
+
+<form method="POST" action="{{ url_for('bipolar_disorder_test') }}">
+
+Over the past 2 weeks (or in general patterns), how much do the following apply to you?<br>
+0 = Never<br>
+1 = A little<br>
+2 = Sometimes<br>
+3 = Moderately<br>
+4 = Quite a lot<br>
+5 = Very much<br><br>
+1. MANIC/ HYPOMANIC SYMPTOMS<br>
+<p>1. I feel unusually energetic or active compared to my normal self?</p>
+<input type="radio" name="q1" value="0"required>Never
+<input type="radio" name="q1" value="1">A little
+<input type="radio" name="q1" value="2">Sometimes
+<input type="radio" name="q1" value="3">Moderately
+<input type="radio" name="q1" value="4">Quite a lot
+<input type="radio" name="q1" value="5">Very much
+
+<p>2. I need less sleep but still feel rested?</p>
+<input type="radio" name="q2" value="0"required>Never
+<input type="radio" name="q2" value="1">A little
+<input type="radio" name="q2" value="2">Sometimes
+<input type="radio" name="q2" value="3">Moderately
+<input type="radio" name="q2" value="4">Quite a lot
+<input type="radio" name="q2" value="5">Very much
+
+<p>3. I feel overly confident or unusually important?</p>
+<input type="radio" name="q3" value="0"required>Never
+<input type="radio" name="q3" value="1">A little
+<input type="radio" name="q3" value="2">Sometimes
+<input type="radio" name="q3" value="3">Moderately
+<input type="radio" name="q3" value="4">Quite a lot
+<input type="radio" name="q3" value="5">Very much
+
+<p>4. My thoughts race quickly from one idea to another?</p>
+<input type="radio" name="q4" value="0"required>Never
+<input type="radio" name="q4" value="1">A little
+<input type="radio" name="q4" value="2">Sometimes
+<input type="radio" name="q4" value="3">Moderately
+<input type="radio" name="q4" value="4">Quite a lot
+<input type="radio" name="q4" value="5">Very much
+
+<p>5. I talk more than usual or feel pressure to keep talking?</p>
+<input type="radio" name="q5" value="0"required>Never
+<input type="radio" name="q5" value="1">A little
+<input type="radio" name="q5" value="2">Sometimes
+<input type="radio" name="q5" value="3">Moderately
+<input type="radio" name="q5" value="4">Quite a lot
+<input type="radio" name="q5" value="5">Very much
+
+<p>6. I engage in risky or impulsive behaviors (e.g., spending, decisions)?</p>
+<input type="radio" name="q6" value="0"required>Never
+<input type="radio" name="q6" value="1">A little
+<input type="radio" name="q6" value="2">Sometimes
+<input type="radio" name="q6" value="3">Moderately
+<input type="radio" name="q6" value="4">Quite a lot
+<input type="radio" name="q6" value="5">Very much
+
+<p>7. I feel unusually happy, euphoric, or irritable?</p>
+<input type="radio" name="q7" value="0"required>Never
+<input type="radio" name="q7" value="1">A little
+<input type="radio" name="q7" value="2">Sometimes
+<input type="radio" name="q7" value="3">Moderately
+<input type="radio" name="q7" value="4">Quite a lot
+<input type="radio" name="q7" value="5">Very much<br><br>
+
+2. DEPRESSIVE SYMPTOMS<br>
+<p>8. I feel sad, down, or hopeless?</p>
+<input type="radio" name="q8" value="0"required>Never
+<input type="radio" name="q8" value="1">A little
+<input type="radio" name="q8" value="2">Sometimes
+<input type="radio" name="q8" value="3">Moderately
+<input type="radio" name="q8" value="4">Quite a lot
+<input type="radio" name="q8" value="5">Very much
+
+<p>9. I lose interest or pleasure in activities I usually enjoy?</p>
+<input type="radio" name="q9" value="0"required>Never
+<input type="radio" name="q9" value="1">A little
+<input type="radio" name="q9" value="2">Sometimes
+<input type="radio" name="q9" value="3">Moderately
+<input type="radio" name="q9" value="4">Quite a lot
+<input type="radio" name="q9" value="5">Very much
+
+<p>10. I feel tired or have low energy?</p>
+<input type="radio" name="q10" value="0"required>Never
+<input type="radio" name="q10" value="1">A little
+<input type="radio" name="q10" value="2">Sometimes
+<input type="radio" name="q10" value="3">Moderately
+<input type="radio" name="q10" value="4">Quite a lot
+<input type="radio" name="q10" value="5">Very much
+
+<p>11. I have trouble sleeping or sleep too much?</p>
+<input type="radio" name="q11" value="0"required>Never
+<input type="radio" name="q11" value="1">A little
+<input type="radio" name="q11" value="2">Sometimes
+<input type="radio" name="q11" value="3">Moderately
+<input type="radio" name="q11" value="4">Quite a lot
+<input type="radio" name="q11" value="5">Very much
+
+<p>12. I feel worthless or excessively guilty?</p>
+<input type="radio" name="q12" value="0"required>Never
+<input type="radio" name="q12" value="1">A little
+<input type="radio" name="q12" value="2">Sometimes
+<input type="radio" name="q12" value="3">Moderately
+<input type="radio" name="q12" value="4">Quite a lot
+<input type="radio" name="q12" value="5">Very much
+
+<p>13. I have difficulty concentrating or making decisions?</p>
+<input type="radio" name="q13" value="0"required>Never
+<input type="radio" name="q13" value="1">A little
+<input type="radio" name="q13" value="2">Sometimes
+<input type="radio" name="q13" value="3">Moderately
+<input type="radio" name="q13" value="4">Quite a lot
+<input type="radio" name="q13" value="5">Very much
+
+<p>14. I have thoughts about death or self-harm?</p>
+<input type="radio" name="q14" value="0"required>Never
+<input type="radio" name="q14" value="1">A little
+<input type="radio" name="q14" value="2">Sometimes
+<input type="radio" name="q14" value="3">Moderately
+<input type="radio" name="q14" value="4">Quite a lot
+<input type="radio" name="q14" value="5">Very much<br><br>
+
+3. MIXED SYMPTOMS<br>
+<p>15. I feel both restless/energetic and sad at the same time?</p>
+<input type="radio" name="q15" value="0"required>Never
+<input type="radio" name="q15" value="1">A little
+<input type="radio" name="q15" value="2">Sometimes
+<input type="radio" name="q15" value="3">Moderately
+<input type="radio" name="q15" value="4">Quite a lot
+<input type="radio" name="q15" value="5">Very much
+
+<p>16. I have racing thoughts but also feel hopeless?</p>
+<input type="radio" name="q16" value="0"required>Never
+<input type="radio" name="q16" value="1">A little
+<input type="radio" name="q16" value="2">Sometimes
+<input type="radio" name="q16" value="3">Moderately
+<input type="radio" name="q16" value="4">Quite a lot
+<input type="radio" name="q16" value="5">Very much
+
+<p>17. My mood shifts quickly between high energy and low mood?</p>
+<input type="radio" name="q17" value="0"required>Never
+<input type="radio" name="q17" value="1">A little
+<input type="radio" name="q17" value="2">Sometimes
+<input type="radio" name="q17" value="3">Moderately
+<input type="radio" name="q17" value="4">Quite a lot
+<input type="radio" name="q17" value="5">Very much
+
+<p>18. I feel agitated or irritated while also feeling depressed?</p>
+<input type="radio" name="q18" value="0"required>Never
+<input type="radio" name="q18" value="1">A little
+<input type="radio" name="q18" value="2">Sometimes
+<input type="radio" name="q18" value="3">Moderately
+<input type="radio" name="q18" value="4">Quite a lot
+<input type="radio" name="q18" value="5">Very much
+
+<p>19. I have difficulty controlling emotions that change rapidly?</p>
+<input type="radio" name="q19" value="0"required>Never
+<input type="radio" name="q19" value="1">A little
+<input type="radio" name="q19" value="2">Sometimes
+<input type="radio" name="q19" value="3">Moderately
+<input type="radio" name="q19" value="4">Quite a lot
+<input type="radio" name="q19" value="5">Very much
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>

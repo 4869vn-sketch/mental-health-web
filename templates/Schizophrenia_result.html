@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schizophrenia Test Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            margin: 100px auto;
+            padding: 30px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .low { color: green; }
+        .mild { color: #e6b800; }
+        .moderate { color: rgb(0, 30, 255); }
+        .high { color: red; }
+        .very high { color: #ee09cf;}
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Your Result</h1>
+
+    <h2 class="
+        {% if 'Minimal' in result %}low
+        {% elif 'Mild' in result %}mild
+        {% elif 'Moderate' in result %}moderate
+        {% elif 'High' in result %}high
+        {% else %}very high
+        {% endif %}
+    ">
+        {{ result }}<br>({{score}}/48)
+    </h2>
+
+    <p>
+        {% if 'Minimal' in result %}
+            You show very few or no symptoms related to schizophrenia arre present. No significant impact on daily functioning.
+        
+        {% elif 'Mild' in result %}
+            Some mild symptoms may be present (e.g., slight unusual thoughts or perceptions), but they don't significantly interfere with daily life.
+        
+        {% elif 'Moderate' in result %}
+            Noticeable symptoms such as occasional hallucinations, delusional thinking, or disorganized thoughts. These may begin to affect daily activities and social interactions.
+        
+        {% elif 'High' in result %}
+            Clear and frequent symptoms including hallucinations, delusions, and impaired thinking. These significantly disrupt daily functioning and relationships.
+        
+        {% elif 'Very hight' %}
+            Clear and frequent symptoms including hallucinations, delusions, and impaired thinking. These significantly disrupt daily functioning and relationships.
+        {% endif %}
+    </p>
+
+    <br>
+    <a href="/test/Schizophrenia">Do test again</a>
+
+</div>
+
+</body>
+</html>

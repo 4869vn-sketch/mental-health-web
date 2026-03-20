@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Disorders</title>
+</head>
+
+<body>
+
+<h1>Mental Disorders</h1>
+
+<ul>
+{% for d in diseases %}
+    <li>
+        <h3>{{ d.name }}</h3>
+        <p>{{ d.description }}</p>
+    </li>
+{% endfor %}
+</ul>
+
+<a href="/">Back Home</a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

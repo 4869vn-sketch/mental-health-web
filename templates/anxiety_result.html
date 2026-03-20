@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AvPD Test Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            margin: 100px auto;
+            padding: 30px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .low { color: green; }
+        .mild { color: #e6b800; }
+        .moderate { color: rgb(0, 30, 255); }
+        .high { color: red; }
+        .very high { color: #ee09cf;}
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Your Result</h1>
+
+    <h2 class="
+        {% if 'Minimal' in result %}low
+        {% elif 'Mild' in result %}mild
+        {% elif 'Moderate' in result %}moderate
+        {% elif 'High' in result %}high
+        {% else %}very high
+        {% endif %}
+    ">
+        {{ result }}<br>({{ score}}/60)
+    </h2>
+
+    <p>
+        {% if 'Minimal' in result %}
+            Your anxiety level is minimal. You are generally calm and relaxed.
+        
+        {% elif 'Mild' in result %}
+            You have mild anxiety. It may appear occasionally but is manageable.
+        
+        {% elif 'Moderate' in result %}
+            You experience moderate anxiety. It may affect your daily life at times.
+        
+        {% elif 'High' in result %}
+            You have high anxiety levels. It may interfere with your daily life. 
+        
+        {% elif 'Very hight' %}
+            You have very high anxiety levels. It is strongly recommended to seek professional help.
+
+        {% endif %}
+    </p>
+
+    <br>
+    <a href="/test/Anxiety Disorder">Do test again</a>
+
+</div>
+
+</body>
+</html>

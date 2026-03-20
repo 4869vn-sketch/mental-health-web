@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anorexia Nervosa Test Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            margin: 100px auto;
+            padding: 30px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .low { color: green; }
+        .mild { color: #e6b800; }
+        .moderate { color: rgb(0, 30, 255); }
+        .high { color: red; }
+        .very high { color: #ee09cf;}
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Your Result</h1>
+
+    <h2 class="
+        {% if 'Minimal' in result %}low
+        {% elif 'Mild' in result %}mild
+        {% elif 'Moderate' in result %}moderate
+        {% elif 'High' in result %}high
+        {% else %}very high
+        {% endif %}
+    ">
+        {{ result }}<br>({{score}}/78)
+    </h2>
+
+    <p>
+        {% if 'Minimal' in result %}
+            Your responses suggest minimal signs of disordered eating. At this level, there is no strong indication of anorexia-related patterns. Continue maintaining a balanced and healthy relationship with food and your body.
+        
+        {% elif 'Mild' in result %}
+            Your responses indicate mild signs of restrictive eating or body-related concerns. While not severe, these patterns may develop over time if not addressed. It is important to stay aware of your habits and attitudes toward food and body image.
+        
+        {% elif 'Moderate' in result %}
+            Your results show a moderate level of symptoms associated with disordered eating. These patterns may already be affecting your physical health or mental well-being. Early attention and support are strongly recommended.
+        
+        {% elif 'High' in result %}
+            Your results indicate a high level of symptoms consistent with anorexia nervosa. These behaviors and thoughts can significantly impact both physical and psychological health. It is strongly recommended that you seek professional help as soon as possible.
+        
+        {% elif 'Very hight' %}
+            Your results indicate very severe symptoms consistent with anorexia nervosa. This is a serious and potentially life-threatening condition that requires immediate professional attention. Seeking help from a qualified healthcare provider is highly urgent.
+        {% endif %}
+    </p>
+
+    <br>
+    <a href="/test/Anorexia Nervosa">Do test again</a>
+
+</div>
+
+</body>
+</html>

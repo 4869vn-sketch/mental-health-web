@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        background: #ffffff;
+        color: red;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100px;
+        margin: 0;
+    }
+    .container {
+       width: 60%;
+       background: #000000;
+       padding: 20px;
+       border-radius: 20px;
+    }
+    h1{
+        color: #0080ff;
+    }
+    p {
+        background: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    h3{
+        color: #0080ff;
+    }
+</style>
+<title>Mental Health Chatbot</title>
+</head>
+
+<body>
+<div class="container">
+<h1>Mental Health AI Chatbot</h1>
+*AI is an information-providing tool, not a substitute for a doctor's diagnosis. If you are in an emergency, please contact a Professional.
+<form method = "POST">
+
+<input type = "text" name = "message" placeholder = "Ask something about mental health" required>
+
+<button type = "submit"> Send</button>
+
+</form>
+
+{% if reply %}
+
+<h3>AI Response:</h3>
+<p>{{reply}}</p>
+{% endif %}
+<a href="/">Back Home</a>
+</div>
+
+</body>
+</html>

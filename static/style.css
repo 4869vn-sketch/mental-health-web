@@ -1,0 +1,25 @@
+body{
+    font-family: Arial;
+    margin:40px;
+    background:#000000;
+}
+
+h1{
+    color:#ec0f0f;
+}
+
+h2{
+    color: #ec0f0f;
+}
+
+h3{
+    color: #ec0f0f;
+}
+
+p{
+    color: white;
+}
+a{
+    display:block;
+    margin:10px 0;
+}
