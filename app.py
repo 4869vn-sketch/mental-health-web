@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for
 import sqlite3
+import requests
 
 app = Flask(__name__)
 
@@ -79,7 +80,7 @@ def chatbot():
 
     if request.method == "POST":
 
-        message = request.form["message"]
+        message = requests.form["message"]
         reply = chatbot_response(message)
 
     return render_template("chatbot.html", reply=reply)
