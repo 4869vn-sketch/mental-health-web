@@ -54,14 +54,14 @@ def get_disorders():
             "name": "Borderline personality disorder (BPD)",
             "description": "A characterized by instability in emotions, self-image and behavior, along with sharky relationships.",
             "symtoms": "Extreme fear of abandonment, impulsive behavior, rapid mood swings, self-harm/ suicidal behavior and persistent feelings of emptiness.",
-            "note" : "This 9 symptoms listed in the DSM-5, page 663." f"<a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC8620075/' target='_blank' style='color: orange;'>Newspaper PMC</a>"
+            "note" : "The 9 symptoms listed in the DSM-5, page 663." f"<a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC8620075/' target='_blank' style='color: orange;'>Newspaper PMC</a>"
         },
         {
             "id": 5,
             "name": "Obsessive-compulsive disorder (OCD)",
             "description": "Persistent, obsessive thoughts that cause anxiety and repetitive, compulsive behaviors to alleviate that anxiety.",
             "symptoms": "Repetitive throughts, repetitive behaviors.",
-            "note" : "This 8 symptoms listed in the DSM-5, page 678." f"<a href='https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd' target='_blank' style='color: yelow;'>Newspaper NIMH</a>"
+            "note" : "The 8 symptoms listed in the DSM-5, page 678." f"<a href='https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd' target='_blank' style='color: yelow;'>Newspaper NIMH</a>"
         },
         {
             "id": 6,
@@ -75,7 +75,7 @@ def get_disorders():
             "name": "Anorexia Nervosa",
             "description": "Patients starve themselves due to an overwhelming fear of gaining weight and becoming disfigured.",
             "symptoms": "Severe weight loss, fatigue, insomnia, changes in skin and hair, poor tolerance, endocrine disorders (in women). Extreme dieting, food obsession, lying about eating habis. Extreme fear of weight gain, irritability.",
-            "note" : "This disease is more common in female. This disease can occur in LGB+ (gay, lesbian, bixesual,...) people and Transgender (trans guy, trans girl,...) people due to body image issues and social stigma."
+            "note" : "This disease is more common in female. This disease can occur in LGB+ (gay, lesbian, bixesual,...) people and Transgender (transguy, transgirl,...) people due to body image issues and social stigma."
         }
     ]
 
