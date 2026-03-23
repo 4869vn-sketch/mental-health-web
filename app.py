@@ -32,31 +32,36 @@ def get_disorders():
             "id": 1,
             "name": "Anxiety Disorder",
             "description": "A condition characterized by excessive worry and fear.",
-            "symptoms": "Restlessness, rapid heartbeat."
+            "symptoms": "Restlessness, rapid heartbeat.",
+            "note" : "See this disease in the DSM-5, page 189."
         },
         {
             "id": 2,
             "name": "Bipolar Disorder",
             "description": "A disorder associated with episodes of mood swings.",
-            "symptoms": "Insomnia, rapid speed, overcondifidence during mania, exhaustion, low self-esteem during depression."
+            "symptoms": "Insomnia, rapid speed, overcondifidence during mania, exhaustion, low self-esteem during depression.",
+            "note" : "The symptoms of Bipolar I Disorder and Bipolar II Disorder can be found in the DSM-5, page 123 (Bipolar I Disorder) and page 132 (Bipolar II Disorder)."
         },
         {
             "id": 3,
             "name": "Avoidant personality disorder (AvPD)",
             "description": "A condition characterized by social inhibition, extreme low self-esteem and excessive sensitivity to critism and rejection.",
-            "symptoms": "Avoiding social activities, fear of rejection/ mockery."
+            "symptoms": "Avoiding social activities, fear of rejection/ mockery.",
+            "note" : "The 7 symptoms listed in the DSM-5, page 672." f"<a href='https://www.ncbi.nlm.nih.gov/books/NBK559325/' target='_blank' style='color: green;'>Newspaper NIH</a>"
         },
         {
             "id": 4,
             "name": "Borderline personality disorder (BPD)",
             "description": "A characterized by instability in emotions, self-image and behavior, along with sharky relationships.",
-            "symtoms": "Extreme fear of abandonment, impulsive behavior, rapid mood swings, self-harm/ suicidal behavior and persistent feelings of emptiness."
+            "symtoms": "Extreme fear of abandonment, impulsive behavior, rapid mood swings, self-harm/ suicidal behavior and persistent feelings of emptiness.",
+            "note" : "This 9 symptoms listed in the DSM-5, page 663." f"<a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC8620075/' target='_blank' style='color: orange;'>Newspaper PMC</a>"
         },
         {
             "id": 5,
             "name": "Obsessive-compulsive disorder (OCD)",
             "description": "Persistent, obsessive thoughts that cause anxiety and repetitive, compulsive behaviors to alleviate that anxiety.",
-            "symptoms": "Repetitive throughts, repetitive behaviors."
+            "symptoms": "Repetitive throughts, repetitive behaviors.",
+            "note" : "This 8 symptoms listed in the DSM-5, page 678." f"<a href='https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd' target='_blank' style='color: yelow;'>Newspaper NIMH</a>"
         },
         {
             "id": 6,
@@ -68,8 +73,9 @@ def get_disorders():
         {
             "id": 7,
             "name": "Anorexia Nervosa",
-            "description": "Patients starve themselves due to an overwhelming fear of gaining weight and becoming disfigured. This disease is more common in female.",
-            "symptoms": "Severe weight loss, fatigue, insomnia, changes in skin and hair, poor tolerance, endocrine disorders (in women). Extreme dieting, food obsession, lying about eating habis. Extreme fear of weight gain, irritability."
+            "description": "Patients starve themselves due to an overwhelming fear of gaining weight and becoming disfigured.",
+            "symptoms": "Severe weight loss, fatigue, insomnia, changes in skin and hair, poor tolerance, endocrine disorders (in women). Extreme dieting, food obsession, lying about eating habis. Extreme fear of weight gain, irritability.",
+            "note" : "This disease is more common in female. This disease can occur in LGB+ (gay, lesbian, bixesual,...) people and Transgender (trans guy, trans girl,...) people due to body image issues and social stigma."
         }
     ]
 
